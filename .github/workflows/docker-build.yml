@@ -11,6 +11,11 @@ on:
       - 'Dockerfile'
   workflow_dispatch:  # Allows manual triggering
 
+# Add permissions for the GITHUB_TOKEN
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
